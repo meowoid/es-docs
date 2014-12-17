@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Emotion Sense Developer Docs</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="../css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<div class="page-container">
+  
+	<!-- top navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+       <div class="container">
+    	<div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="#">Emotion Sense</a>
+    	</div>
+       </div>
+    </div>
+      
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-left">
+        
+        <!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <li><a href="../index.html"><< Home</a></li>
+              <li><a href="../android.html">Android Sensing API</a></li>
+              <li><a href="storage.html">Data Storage</a></li>
+              <li><a href="transfer.html">Data Transfer</a></li>
+              <li><a href="query.html"><b>Data Query</b></a></li>
+              <li><a href="examples.html">Example Applications</a></li>
+            </ul>
+        </div>
+  	
+        <!-- main area -->
+        <div class="col-xs-12 col-sm-9">
+          <h1>Data Queries</h1>
+
+          <h3>Overview</h3> 
+          <p>All control of sensors data collection is done via the <a href="https://github.com/xsenselabs/SensorManager/blob/master/src/com/ubhave/sensormanager/ESSensorManager.java" target="_blank">ESSensorManager singleton</a>. This instance manages all the sensing threads and starts, stops, and modifies them as required by the application: this ensures that data is only collected when it is required. The singleton supports two kinds of data collection (below).
+
+          <h3>Recent Data</h3>
+          <p></p>
+          
+        </div><!-- /.col-xs-12 main -->
+    </div><!--/.row-->
+  </div><!--/.container-->
+</div><!--/.page-container-->
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/scripts.js"></script>
+	</body>
+</html>
