@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Collapsing sidebar drawer menu</title>
+		<title>Emotion Sense Developer Docs</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +38,8 @@
               <li><a href="index.html"><b>Home</b></a></li>
               <li><a href="data.html">Sensor Data</a></li>
               <li><a href="android.html">Android Sensing API</a></li>
-              <li><a href="android.html">Example Applications</a></li>          
+              <li><a href="android.html">Example Applications</a></li>
+              <li><a href="research.html">Research</a></li>
             </ul>
         </div>
   	
@@ -46,24 +47,14 @@
         <div class="col-xs-12 col-sm-9">
           <h1>Developers</h1>
 
-          <h3>Sensor Data</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nisi eu arcu tempus vehicula. 
-            Nulla faucibus cursus metus in sagittis. Nunc elit leo, imperdiet in ligula in, euismod varius est. 
-            Aenean pellentesque lorem a porttitor placerat. Vestibulum placerat nunc ac rutrum fringilla. Donec 
-            arcu leo, tempus adipiscing volutpat id, congue in purus. Pellentesque scelerisque mattis nibh vel 
-            semper. Sed a risus purus. Fusce pulvinar, velit eget rhoncus facilisis, enim elit vulputate nisl, a 
-            euismod diam metus eu enim. Nullam congue justo vitae justo accumsan, sit amet malesuada nulla sagittis. 
-            Nam neque tellus, tristique in est vel, sagittis congue turpis. Aliquam nulla lacus, laoreet dapibus 
-            odio vitae, posuere volutpat magna. Nam pulvinar lacus in sapien feugiat, sit amet vestibulum enim 
-            eleifend. Integer sit amet ante auctor, lacinia sem quis, consectetur nulla.</p>
+          <h3>Overview</h3>
+          <p>The ubiquity of sensor-rich and computationally powerful smartphones makes them an ideal platform for health and wellness applications. To facilitate the development of social sensing and data collection applications, we are developing a set of open-source smartphone libraries to collect, store and transfer, and query sensor data. All of our code, including these documentation pages, can be found on our <a href="https://github.com/xsenselabs">Github Page</a>.</p>
 
-          <h3>Android Sensing API</h3>    
-          <p>Vestibulum porttitor massa eget pellentesque eleifend. Suspendisse tempor, nisi eu placerat auctor, 
-            est erat tempus neque, pellentesque venenatis eros lorem vel quam. Nulla luctus malesuada porttitor. 
-            Fusce risus mi, luctus scelerisque hendrerit feugiat, volutpat gravida nisi. Quisque facilisis risus 
-            in lacus sagittis malesuada. Suspendisse non purus diam. Nunc commodo felis sit amet tortor 
-            adipiscing varius. Fusce commodo nulla quis fermentum hendrerit. Donec vulputate, tellus sed 
-            venenatis sodales, purus nibh ullamcorper quam, sit amet tristique justo velit molestie lorem.</p>
+          <h3>Data Collection</h3>    
+          <p>Currently, accessing data from different sensors requires writing code that is tailored and variant for each sensor, and there is little support for continuous sensing applications, barring a few sensors such as the accelerometer. The Sensor Manager (<a href="https://github.com/xsenselabs/SensorManager">Android</a>) provides a uniform and easily configurable access to sensor data, supporting both one-off and continuous sensing scenarios.</p>
+
+          <h3>Data Formatting and Management</h3>    
+          <p>To encapsulate the ideas of formatting, storing, querying, and transmitting data, we built a Data Manager (<a href="https://github.com/xsenselabs/SensorDataManager">Android</a>) that acts as a data sink for sensor-enhanced applications. While the manager directly supports formatting sensor data, it can also store and transmit any data that is identified with an appropriate tag. Since applications may collect large amounts of data, the manager can also be reconfigured to transmit data asynchronously.</p>
           
         </div><!-- /.col-xs-12 main -->
     </div><!--/.row-->
