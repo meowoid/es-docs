@@ -49,12 +49,16 @@
           <h3>Overview</h3>
           <p>The ubiquity of sensor-rich and computationally powerful smartphones makes them an ideal platform for health and wellness applications. To facilitate the development of social sensing and data collection applications, we are developing a set of open-source smartphone libraries to collect, store and transfer, and query sensor data. All of our code, including these documentation pages, can be found on our <a href="https://github.com/xsenselabs">Github Page</a>.</p>
 
-          <h3>Data Collection</h3>    
-          <p>Currently, accessing data from different sensors requires writing code that is tailored and variant for each sensor, and there is little support for continuous sensing applications, barring a few sensors such as the accelerometer. The Sensor Manager (<a href="https://github.com/xsenselabs/SensorManager">Android</a>) provides a uniform and easily configurable access to sensor data, supporting both one-off and continuous sensing scenarios.</p>
+          <h3>Sensing API</h3>    
+          <p>The Sensor Manager (<a href="https://github.com/xsenselabs/SensorManager">Android Code</a>, <a href="android.html">Android Docs</a>) provides a uniform and easily configurable access to sensor data, supporting both one-off and continuous sensing scenarios.</p>
 
-          <h3>Data Formatting and Management</h3>    
-          <p>To encapsulate the ideas of formatting, storing, querying, and transmitting data, we built a Data Manager (<a href="https://github.com/xsenselabs/SensorDataManager">Android</a>) that acts as a data sink for sensor-enhanced applications. While the manager directly supports formatting sensor data, it can also store and transmit any data that is identified with an appropriate tag. Since applications may collect large amounts of data, the manager can also be reconfigured to transmit data asynchronously.</p>
-          
+          <h3>JSON Formatting</h3>
+          <p>We use an open format to represent data from each sensor, using JSON. In the <a href="data.html">data section</a> of these docs, you can find descriptions and example data from all of the sensors that our library can currently sense from; the Data Manager library includes methods to format data.
+
+          <h3>Data Storage and Transmission</h3>  
+          <p>To encapsulate the ideas of formatting, storing, querying, and transmitting data, we built a Data Manager (<a href="https://github.com/xsenselabs/SensorDataManager">Android Code</a>, <a href="android.html">Android Docs</a>) that acts as a data sink for sensor-enhanced applications. The manager directly supports formatting sensor data and can also store and transmit any data that is identified with an appropriate tag. Since applications may collect large amounts of data, the manager can also be configured to transmit data asynchronously.</p>   
+
+  
         </div><!-- /.col-xs-12 main -->
     </div><!--/.row-->
   </div><!--/.container-->

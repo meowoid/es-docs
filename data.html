@@ -65,14 +65,11 @@
           <h1>Sensor Data</h1>
 
           <h3>Definitions</h3>
-          <p>We adopt a very broad definition of “sensor,” taking it to mean <i>any signal that can be unobtrusively captured from the smartphone device</i>. These include:</p>
+          <p>We adopt a very broad definition of “sensor,” taking it to mean <i>any signal that can be unobtrusively captured from the smartphone device</i>. A full list of the sensors we currently support are available on the menu bar. These include:</p>
 
-          <p><b>Pull Sensors</b>: this set includes all sensors that the Android OS does not capture data from until requested to do so by an application. They currently include the accelerometer, location (both coarse, from the nearest cell-tower, and fine, from the GPS), and microphone amplitude levels. They further support querying for Wi-Fi, Bluetooth, and active application scan results, as well as querying the SMS and call logs.</p>
+          <p><b>Pull Sensors</b>: All sensors that the Android OS does not capture data from until requested to do so by an application. They currently include the accelerometer, location (both coarse, from the nearest cell-tower, and fine, from the GPS), and microphone amplitude levels. They further support querying for Wi-Fi, Bluetooth, and active application scan results, as well as querying the SMS and call logs.</p>
 
           <p><b>Push Sensors</b>. The Android OS publishes data about particular events that applications can receive: this set of sensors receives this information on behalf of an application, and includes: the battery (energy levels), connection state (whether the phone is connected to a Wi-Fi or mobile network and if it is in roaming mode), the proximity sensor (near/far events), screen on/off events, phone calls starting/ending, and SMS sent/received events.</p>
-
-          <h3>JSON Data Formatting</h3> 
-          <p>We represent sensor data using the <a href="http://en.wikipedia.org/wiki/JSON" target="_blank">JavaScript Object Notation</a> (JSON) format. This allowed for the flexibility of storing a variety of different sensors in a uniform, extensible, and open format.</p>
 
         </div><!-- /.col-xs-12 main -->
     </div><!--/.row-->
