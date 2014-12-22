@@ -37,8 +37,7 @@
             <ul class="nav">
               <li><a href="../index.html"><< Home</a></li>
               <li><a href="../android.html">Android Sensing API</a></li>
-              <li><a href="storage.html">Data Storage</a></li>
-              <li><a href="transfer.html">Data Transfer</a></li>
+              <li><a href="data_manager.html">Data Storage/Transfer</a></li>
               <li><a href="query.html">Data Query</a></li>
               <li><a href="examples.html"><b>Example Applications</b></a></li>
             </ul>
@@ -49,10 +48,18 @@
           <h1>Example Applications</h1>
 
           <h3>Overview</h3> 
-          <p>All control of sensors data collection is done via the <a href="https://github.com/xsenselabs/SensorManager/blob/master/src/com/ubhave/sensormanager/ESSensorManager.java" target="_blank">ESSensorManager singleton</a>. This instance manages all the sensing threads and starts, stops, and modifies them as required by the application: this ensures that data is only collected when it is required. The singleton supports two kinds of data collection (below).
+          <p>All of the example apps described below (and more) are in the <a href="https://github.com/xsenselabs/ESLibrary-Examples">ESLibrary-Examples</a> repository.
 
           <h3>Examples</h3>
-          <p></p>
+          <p><a href="https://github.com/xsenselabs/ESLibrary-Examples/tree/master/SensorManagerBasicExample">Sensor Manager Basic Example</a>. A simple app that shows you how to sense from all the different sensors using our API.</p>
+
+          <p><a href="https://github.com/xsenselabs/ESLibrary-Examples/tree/master/SensorManagerExample">Sensor Manager Basic Example</a>. An app with a basic UI that allows you to select and sense from a sensor.</p>
+
+          <p><a href="https://github.com/xsenselabs/ESLibrary-Examples/tree/master/SensorDataManagerExample">Sensor Data Manager Example</a>. An app that shows you how to extend one of our logger types in order to store and transfer the data you sense.</p>
+
+          <p><a href="https://github.com/xsenselabs/ESLibrary-Examples/tree/master/SensingWithServiceSubscriptionsExample">Sensing with Service Subscriptions Example</a>. An app that senses using two different background services.</p>
+
+          <p><a href="https://github.com/xsenselabs/ESLibrary-Examples/tree/master/SensingWithAlarmsExample">Sensing with Alarms Example</a>. An app that shows you how to combine alarms and sensing.</p>
           
         </div><!-- /.col-xs-12 main -->
     </div><!--/.row-->
