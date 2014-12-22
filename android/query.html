@@ -37,8 +37,7 @@
             <ul class="nav">
               <li><a href="../index.html"><< Home</a></li>
               <li><a href="../android.html">Android Sensing API</a></li>
-              <li><a href="storage.html">Data Storage</a></li>
-              <li><a href="transfer.html">Data Transfer</a></li>
+              <li><a href="data_manager.html">Data Storage/Transfer</a></li>
               <li><a href="query.html"><b>Data Query</b></a></li>
               <li><a href="examples.html">Example Applications</a></li>
             </ul>
@@ -48,11 +47,10 @@
         <div class="col-xs-12 col-sm-9">
           <h1>Data Queries</h1>
 
-          <h3>Overview</h3> 
-          <p>All control of sensors data collection is done via the <a href="https://github.com/xsenselabs/SensorManager/blob/master/src/com/ubhave/sensormanager/ESSensorManager.java" target="_blank">ESSensorManager singleton</a>. This instance manages all the sensing threads and starts, stops, and modifies them as required by the application: this ensures that data is only collected when it is required. The singleton supports two kinds of data collection (below).
-
           <h3>Recent Data</h3>
-          <p></p>
+          <p>The data manager instance includes:</p>
+          <pre><code>public List&lt;SensorData&gt; getRecentSensorData(int sensorId, long startTimestamp) throws ESException, IOException;</code></pre>
+          <p>Where the <code>sensorId</code> is the sensor's integer identifier from <code>com.ubhave.sensormanager.sensors.SensorUtils.java</code>; the query returns any sensor data captured since the <code>startTimestamp</code> is (in millis) until now.
           
         </div><!-- /.col-xs-12 main -->
     </div><!--/.row-->

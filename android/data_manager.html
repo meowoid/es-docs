@@ -37,8 +37,7 @@
             <ul class="nav">
               <li><a href="../index.html"><< Home</a></li>
               <li><a href="../android.html">Android Sensing API</a></li>
-              <li><a href="storage.html"><b>Data Storage</b></a></li>
-              <li><a href="transfer.html">Data Transfer</a></li>
+              <li><a href="data_manager.html"><b>Data Storage/Transfer</b></a></li>
               <li><a href="query.html">Data Query</a></li>
               <li><a href="examples.html">Example Applications</a></li>
             </ul>
@@ -49,16 +48,32 @@
           <h1>Data Storage</h1>
 
           <h3>Overview</h3> 
-          <p>All control of sensors data collection is done via the <a href="https://github.com/xsenselabs/SensorManager/blob/master/src/com/ubhave/sensormanager/ESSensorManager.java" target="_blank">ESSensorManager singleton</a>. This instance manages all the sensing threads and starts, stops, and modifies them as required by the application: this ensures that data is only collected when it is required. The singleton supports two kinds of data collection (below).
+          <p>The main purpose of the data storage library is to allow you to quickly format, store, and transfer your data to a server. There are two decisions you need to make: (a) what kind of storage you would like to use and (b) what kind of transfer policy you would like to use.</p>
 
-          <h3>File System Storage</h3>
-          <p></p>
+          <h3>Transfer</h3>
+          <p>The fastest way to implement a storage/transfer handler for your app is to extend one of the abstract classes provided in the <code>com.ubhave.datahandler.loggertypes</code> package. 
 
-          <h3>SQLite Storage</h3>
-          <p></p>
+          <p><b>No Transfer</b>: Extend the <code>com.ubhave.datahandler.loggertypes.AbstractStoreOnlyLogger.java</code> class.</p>
 
-          <h3>Encrypted SQLite Storage</h3>
-          <p></p>
+          <p><b>POST Immediately</b>: Extend the <code>com.ubhave.datahandler.loggertypes.AbstractImmediateTransferLogger.java</code> class.</p>
+
+          <p><b>Asynchronous Transfer</b>: Extend the <code>com.ubhave.datahandler.loggertypes.AbstractAsyncTransferLogger.java</code> class.</p>
+
+          <p><b>Secure HTTPS Transfer</b></p>
+
+          <h3>Storage</h3>
+          <p>The library provides two kinds of storage, file system, database, and an additional 'no storage' option.</p>
+
+          <p><b>File system</b>: <code>DataStorageConfig.STORAGE_TYPE_FILES</code>. This stores your data in the phone's file system, and requires the <code>android.permission.WRITE_EXTERNAL_STORAGE</code> permission. The data will be stored in directories matching each sensor's name.</p>
+
+          <p><b>SQLite Storage</b>: <code>DataStorageConfig.STORAGE_TYPE_DB</code>. This stores your data in an SQLiteDatabase table that has been named according to the sensor type.</p>
+
+          <p><b>Encrypted SQLite Storage</b></p>
+
+          <h3>Combining Storage and Transfer</h3>
+          <p><b>Note:</b> if you opt to transfer data immediately, you need to set your storage to the 'no storage' option. Similarly, if you only want to store your data (i.e., no transfer) or you want to transfer your data asynchronously, you cannot use the 'no storage' option.</p>
+
+	<br><br><br>
           
         </div><!-- /.col-xs-12 main -->
     </div><!--/.row-->

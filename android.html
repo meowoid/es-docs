@@ -37,8 +37,7 @@
             <ul class="nav">
               <li class="active"><a href="index.html"><< Home</a></li>
               <li><a href="#"><b>Android Sensing API</b></a></li>
-              <li><a href="android/storage.html">Data Storage</a></li>
-              <li><a href="android/transfer.html">Data Transfer</a></li>
+              <li><a href="android/data_manager.html">Data Storage/Transfer</a></li>
               <li><a href="android/query.html">Data Query</a></li>
               <li><a href="android/examples.html">Example Applications</a></li>
             </ul>
@@ -60,6 +59,9 @@
 
           <p><a href="http://en.wikipedia.org/wiki/Attribute%E2%80%93value_pair" target="_blank">Key-Value Configuration</a>. All of the libraries’ configuration settings can be set and retrieved as key-value pairs, regardless of their type. Moreover, when non-critical configuration parameters are not explicitly set, the libraries fall back on a set of default values.</p>
 
+          <h3>Identifying Sensors</h3> 
+          <p>Each sensor in the library is assigned a numeric identifier. These are listed in <code>com.ubhave.sensormanager.sensors.SensorUtils.java</code>.
+
           <h3>Permissions</h3> 
           <p>Most sensors require a particular permission to be added to the application, which users must agree to when installing the app. Naturally, the sensing library cannot and does not capture data from those sensors that the application has not requested permission for.
 
@@ -72,7 +74,10 @@
 <h3>Subscribing to Sensor Data</h3>
 <p>The second is the publish-subscribe model: subscriptions are given a unique identifier which can then be used to pause and unsubscribe them. When collecting data in this way, application developers need to implement two methods. The first is <code>onDataSensed(...)</code>, which implements what do to with the data when it has been pushed to the application; the second is <code>onCrossingLowBatteryThreshold(...)</code>. Most crucially, this latter method directly exposes and, in doing so, guides the application developer to implement actions that should be taken when the battery is low.
 
+<h3>Storing and Transmitting Data</h3>
+<p>The second is the publish-subscribe model: subscriptions are given a unique identifier which can then be used to pause and unsubscribe them. When collecting data in this way, application developers need to implement two methods. The first is <code>onDataSensed(...)</code>, which implements what do to with the data when it has been pushed to the application; the second is <code>onCrossingLowBatteryThreshold(...)</code>. Most crucially, this latter method directly exposes and, in doing so, guides the application developer to implement actions that should be taken when the battery is low.
 
+<br><br><br>
 
 
 
