@@ -71,6 +71,44 @@
 
           <p><b>Push Sensors</b>. The Android OS publishes data about particular events that applications can receive: this set of sensors receives this information on behalf of an application, and includes: the battery (energy levels), connection state (whether the phone is connected to a Wi-Fi or mobile network and if it is in roaming mode), the proximity sensor (near/far events), screen on/off events, phone calls starting/ending, and SMS sent/received events.</p>
 
+          <h3>Data Format</h3>    
+          <p>All JSON formatted data includes the following keys:</p>
+
+<pre><code>{
+	"sensorType": "string",
+	"senseStartTime":"HH:mm:ss:SSS dd MM yyyy Z z",
+	"senseStartTimeMillis":0,
+	"userid":"string",
+	"deviceid":"string",
+}</code></pre>
+
+          <p>Where:
+	<ul>
+		<li><code>sensorType</code>: is the string identifier for the sensor
+		<li><code>senseStartTime</code>: is the string-formatted time that sensing from this sensor began (measured on the device).
+		<li><code> senseStartTimeMillis </code>: is the time in milliseconds that sensing from this sensor began (measured on the device).
+		<li><code>userid</code>: is the string user-id that you have given the data manager.
+		<li><code>deviceid</code>: is string device-id that you have given the data manager.
+	</ul>
+	</p>
+
+          <h4>Pull Sensors</h4>
+          <p>All JSON formatted data includes the following keys:</p>
+
+<pre><code>{
+	"postSenseSleepMillis":0,
+	"isAdaptivelySensed":false,
+}</code></pre>
+
+          <p>Where:
+	<ul>
+		<li><code>postSenseSleepMillis</code>: if the data was sensed by subscribing to a sensor, this is the time in milliseconds that the sensing sleeps after collecting this sample.
+		<li><code>isAdaptivelySensed</code>: a boolean value denoting whether the adaptive sensing algorithm was used.
+	</ul>
+	</p>
+
+<br><br><br>
+
         </div><!-- /.col-xs-12 main -->
     </div><!--/.row-->
   </div><!--/.container-->
