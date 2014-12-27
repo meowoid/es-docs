@@ -64,43 +64,32 @@
           <h1>WiFi</h1>
 
           <h3>Definition</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nisi eu arcu tempus vehicula. 
-            Nulla faucibus cursus metus in sagittis. Nunc elit leo, imperdiet in ligula in, euismod varius est. 
-            Aenean pellentesque lorem a porttitor placerat. Vestibulum placerat nunc ac rutrum fringilla. Donec 
-            arcu leo, tempus adipiscing volutpat id, congue in purus. Pellentesque scelerisque mattis nibh vel 
-            semper. Sed a risus purus. Fusce pulvinar, velit eget rhoncus facilisis, enim elit vulputate nisl, a 
-            euismod diam metus eu enim. Nullam congue justo vitae justo accumsan, sit amet malesuada nulla sagittis. 
-            Nam neque tellus, tristique in est vel, sagittis congue turpis. Aliquam nulla lacus, laoreet dapibus 
-            odio vitae, posuere volutpat magna. Nam pulvinar lacus in sapien feugiat, sit amet vestibulum enim 
-            eleifend. Integer sit amet ante auctor, lacinia sem quis, consectetur nulla.</p>
+          <p>The WiFi sensor performs a scan of nearby WiFi networks.</p>
 
           <h3>Data Format</h3>    
-          <p>Vestibulum porttitor massa eget pellentesque eleifend. Suspendisse tempor, nisi eu placerat auctor, 
-            est erat tempus neque, pellentesque venenatis eros lorem vel quam. Nulla luctus malesuada porttitor. 
-            Fusce risus mi, luctus scelerisque hendrerit feugiat, volutpat gravida nisi. Quisque facilisis risus 
-            in lacus sagittis malesuada. Suspendisse non purus diam. Nunc commodo felis sit amet tortor 
-            adipiscing varius. Fusce commodo nulla quis fermentum hendrerit. Donec vulputate, tellus sed 
-            venenatis sodales, purus nibh ullamcorper quam, sit amet tristique justo velit molestie lorem.</p>
+          <p>The scan result is formatted as a list of JSON objects with each network's SSID, BSSID, capabilities, level, and frequency. If there are no results, the <code>scanResult</code> list contains the string "unavailable".</p>
 
 <pre><code>{
-	"sensorType": "example",
+	"sensorType": "WiFi",
 	"senseStartTime":"HH:mm:ss:SSS dd MM yyyy Z z",
 	"senseStartTimeMillis":0,
 	"userid":"string",
 	"deviceid":"string",
 	"postSenseSleepMillis":0,
 	"isAdaptivelySensed":false,
+	"scanResult":
+	[
+		{
+			"ssid":"string",
+			"bssid":"string",
+			"capabilities":"string",
+			"level":int,
+			"frequency":int
+		}
+	]
 }</code></pre>
 
-          <h3>Usage</h3>     
-          <p>Fusce sollicitudin lacus lacinia mi tincidunt ullamcorper. Aenean velit ipsum, vestibulum nec 
-            tincidunt eu, lobortis vitae erat. Nullam ultricies fringilla ultricies. Sed euismod nibh quis 
-            tincidunt dapibus. Nulla quam velit, porta sit amet felis eu, auctor fringilla elit. Donec 
-            convallis tincidunt nibh, quis pellentesque sapien condimentum a. Phasellus purus dui, rhoncus 
-            id suscipit id, ornare et sem. Duis aliquet posuere arcu a ornare. Pellentesque consequat libero 
-            id massa accumsan volutpat. Fusce a hendrerit lacus. Nam elementum ac eros eu porttitor. 
-            Phasellus enim mi, auctor sit amet luctus a, commodo fermentum arcu. In volutpat scelerisque 
-            quam, nec lacinia libero.</p>
+<br><br><br>
 
           
         </div><!-- /.col-xs-12 main -->
